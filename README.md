@@ -13,6 +13,6 @@ Integrante 4: Mateus Bonfim Lídio.
 
 Integrante 5: Pedro Alves Pires.
 
-Tecnologias utilizadas: …
+Tecnologias utilizadas: HTML, CSS e JavaScrip.
 
 Tipo de licença: uso livre.
