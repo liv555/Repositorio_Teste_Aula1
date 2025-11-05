@@ -1,7 +1,7 @@
 # Repositorio_Teste_Aula1
 Repositório criado para a atividade 1 do projeto de extensão de Dev + Git.
 
-Nome do ecommerce:
+Nome do ecommerce: FitShop.
 
 Integrante líder 1: Lívia Conti Ferreira.
 
