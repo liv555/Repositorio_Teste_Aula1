@@ -5,8 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <title>FitShop - Carrinho</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -44,51 +46,59 @@
             <span class="badge badge-secondary badge-pill">3</span>
           </h4>
 
-          <ul class="list-group mb-3 z-depth-1">
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-              <div>
+         <ul class="list-group mb-3 z-depth-1 cart-items-list">
+    <li class="cart-item-box">
+        <div class="d-flex justify-content-between lh-condensed">
+            <div>
                 <h6 class="my-0">Whey Protein Isolado</h6>
                 <small class="text-muted">900g - Baunilha</small>
-              </div>
-              <span class="text-muted">R$ 149,90</span>
-            </li>
+            </div>
+            <span class="text-muted">R$ 149,90</span>
+        </div>
+    </li>
 
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-              <div>
+    <li class="cart-item-box">
+        <div class="d-flex justify-content-between lh-condensed">
+            <div>
                 <h6 class="my-0">Creatina Monohidratada</h6>
                 <small class="text-muted">250g</small>
-              </div>
-              <span class="text-muted">R$ 89,90</span>
-            </li>
+            </div>
+            <span class="text-muted">R$ 89,90</span>
+        </div>
+    </li>
 
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-              <div>
+    <li class="cart-item-box">
+        <div class="d-flex justify-content-between lh-condensed">
+            <div>
                 <h6 class="my-0">Barra Proteica</h6>
                 <small class="text-muted">Sabor Cookies</small>
-              </div>
-              <span class="text-muted">R$ 12,90</span>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between">
-              <span>Total</span>
-              <strong>R$ 252,70</strong>
-            </li>
-          </ul>
-
-          <form class="card p-2" style="max-width:420px;">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Código de desconto">
-              <div class="input-group-append">
-                <button class="btn btn-secondary btn-md waves-effect m-0" type="button">Aplicar</button>
-              </div>
             </div>
-          </form>
+            <span class="text-muted">R$ 12,90</span>
+        </div>
+    </li>
 
-          <div style="margin-top:18px; display:flex; gap:12px;">
-            <a href="checkout-page.html" class="btn btn-secondary">Voltar</a>
-            <a href="#" class="btn btn-primary">Ir para pagamento</a>
-          </div>
+    <li class="cart-item-box cart-total-box">
+        <div class="d-flex justify-content-between">
+            <span>Total</span>
+            <strong>R$ 252,70</strong>
+        </div>
+    </li>
+</ul>
 
+          <form id="coupon-form" class="card p-2" style="max-width:420px;">
+           <div class="input-group">
+              <input type="text" id="coupon-input" class="form-control" placeholder="Código de desconto" oninput="checkCouponInput()">
+              <div class="input-group-append">
+                <button id="apply-button" class="btn btn-secondary btn-md waves-effect m-0" type="button" disabled>Aplicar</button>
+              </div>
+           </div>
+           <div id="coupon-message" style="margin-top: 10px; color: #4CAF50; font-weight: bold; text-align: center;"></div>
+         </form>
+
+          <div style="margin-top:18px; display:flex; gap:12px; justify-content: center;">
+    <a href="checkout-page.html" class="btn btn-secondary checkout-btn">Voltar</a>
+    <a href="#" class="btn btn-primary checkout-btn">Ir para pagamento</a>
+     </div>
         </div>
       </div>
 
@@ -114,9 +124,9 @@
         <div class="footer-column footer-social">
           <h4>Siga-nos</h4>
           <div class="social-icons">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a> </div>
           </div>
         </div>
       </div>

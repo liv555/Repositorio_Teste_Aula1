@@ -1,22 +1,38 @@
+:root{
+    --bg: #0B0C10;
+    --accent: #66FCF1;
+    --muted: #C5C6C7;
+    --surface: #1F2833;
+    --max-width: 1100px;
+    --font-sans: 'Poppins', 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+*{ box-sizing: border-box; }
+
+html, body { height: 100%; }
+
 body{
-    font-family: Arial, sans-serif;
+    font-family: var(--font-sans);
     margin: 0;
     padding: 0;
-    background-color: #0B0C10;
-}
-
-html, body {
-    height: 100%;
-}
-
-/* layout para empurrar o footer para baixo */
-body {
+    background-color: var(--bg);
+    color: var(--muted);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 main{ flex: 1; }
+
+/* Headings padrão */
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--font-sans);
+    font-weight: 700;
+    margin: 0 0 .6rem 0;
+    letter-spacing: 0.3px;
+}
 
 /*MENU*/
 .header-principal{
@@ -423,8 +439,8 @@ main{
 }
 
 /* ====================================
-   CHECKOUT PAGE STYLES (Estilização Baseada no Tema FitShop)
-   ==================================== */
+    CHECKOUT PAGE STYLES (Estilização Baseada no Tema FitShop)
+    ==================================== */
 
 /* Corpo e Fundo */
 body.grey.lighten-3 {
@@ -594,11 +610,6 @@ hr {
     background-color: #121417 !important; /* Fundo para o card de desconto */
 }
 
-.card.p-2 .form-control {
-    background-color: #0B0C10 !important;
-    border: 1px solid #1F2833 !important;
-}
-
 /* Botão "Aplicar" (secundário) */
 .btn-secondary {
     background-color: #1F2833 !important; /* Fundo do botão "Aplicar" */
@@ -680,7 +691,7 @@ hr {
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon{
-     filter: invert(100%); opacity: 0.9 
+      filter: invert(100%); opacity: 0.9 
 }
 
 @media (max-width: 820px){
@@ -713,7 +724,7 @@ hr {
 }
 
 .carousel-item-js img {
-    /*width: 100%;          /* FALTAVA – É ESSENCIAL */
+    /*width: 100%;           /* FALTAVA – É ESSENCIAL */
     height: 480px;
     object-fit: cover;
     object-position: center;
@@ -776,12 +787,194 @@ hr {
 }
 
 .carousel-supp-link {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .carousel-supp-link:hover {
-  text-decoration: underline;
-  color: #66FCF1;
+    text-decoration: underline;
+    color: #66FCF1;
 }
+
+/* === ESTILOS DOS BOTÕES VOLTAR/PAGAMENTO === */
+/* Estilização para o botão principal de Pagamento/Checkout (azul-claro vibrante) */
+.btn.btn-primary.checkout-btn {
+    /* Cor de fundo e borda */
+    background-color: #63FFDA !important; 
+    border-color: #63FFDA !important; 
+    
+    /* Cor da fonte: BRANCA */
+    color: #FFFFFF !important; 
+    font-weight: bold !important;
+    
+    /* Borda arredondada */
+    border-radius: 30px !important; 
+    
+    /* AJUSTE DO TAMANHO: Padding menor para diminuir a altura */
+    padding: 10px 30px !important; 
+    
+    /* REMOÇÃO DA LARGURA TOTAL para permitir que fiquem lado a lado */
+    width: auto !important; 
+    max-width: none !important;
+    
+    text-align: center;
+    box-shadow: none !important;
+}
+
+/* Estilo do hover para o botão principal */
+.btn.btn-primary.checkout-btn:hover,
+.btn.btn-primary.checkout-btn:active,
+.btn.btn-primary.checkout-btn:focus {
+    background-color: #40e0cf !important; 
+    border-color: #40e0cf !important;
+    color: #FFFFFF !important; 
+    font-weight: bold !important;
+    box-shadow: none !important; 
+}
+
+/* Estilização para o botão "Voltar" (secundário) */
+.btn.btn-secondary.checkout-btn {
+    /* Cor da fonte: BRANCA */
+    color: #FFFFFF !important;
+    font-weight: bold !important;
+    
+    /* Borda arredondada */
+    border-radius: 30px !important;
+    
+    /* AJUSTE DO TAMANHO: Padding menor para diminuir a altura */
+    padding: 10px 30px !important;
+    
+    /* Fundo Cinza para o botão Voltar */
+    background-color: #6c757d !important; 
+    border-color: #6c757d !important;
+    
+    /* REMOÇÃO DA LARGURA TOTAL */
+    width: auto !important;
+    max-width: none !important;
+    
+    box-shadow: none !important;
+}
+
+.btn.btn-secondary.checkout-btn:hover {
+    background-color: #5a6268 !important;
+    border-color: #5a6268 !important;
+    color: #FFFFFF !important;
+    font-weight: bold !important;
+    box-shadow: none !important;
+}
+
+/* === ESTILOS DO CUPOM DE DESCONTO (ATIVO/INATIVO) === */
+
+/* 1. ESTILO PADRÃO (INATIVO): Campo de input */
+#coupon-input {
+    background-color: #0B0C10 !important; /* Usando a variável do tema */
+    color: #FFFFFF !important;
+    border-radius: 5px 0 0 5px !important;
+    /* Borda inativa: Cinza suave */
+    border: 1px solid var(--surface) !important; 
+    transition: border-color 0.3s ease;
+}
+
+#coupon-input::placeholder {
+    color: #9fa0a0 !important; 
+}
+
+/* 2. ESTILO PADRÃO (INATIVO): Botão "Aplicar" */
+#apply-button {
+    /* Cor do botão inativo: Cinza escuro/Surface */
+    background-color: var(--surface) !important; 
+    border-color: var(--surface) !important;
+    color: #9fa0a0 !important; /* Texto cinza suave */
+    font-weight: bold !important;
+    border-radius: 0 5px 5px 0 !important;
+    padding: 8px 15px !important; 
+    cursor: not-allowed; 
+    transition: all 0.3s ease;
+}
+
+/* 3. ESTILO ATIVO (VERDE): Aplicado pelo JavaScript quando há texto */
+
+/* Borda ATIVA do Input (Verde) */
+.coupon-input-active {
+    border: 1px solid #4CAF50 !important; /* Borda verde ativa */
+}
+
+/* Botão ATIVO (Verde) */
+.coupon-active {
+    background-color: #4CAF50 !important; /* Verde ativo */
+    border-color: #4CAF50 !important;
+    color: #FFFFFF !important; /* Texto branco no botão ativo */
+    cursor: pointer !important; 
+}
+
+.coupon-active:hover {
+    background-color: #45a049 !important; /* Verde mais escuro no hover */
+    border-color: #45a049 !important;
+}
+/* --- ESTILOS PARA OS ITENS DO CARRINHO (RETÂNGULOS) --- */
+
+/* Lista pai para espaçamento entre os itens */
+.cart-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Espaçamento entre os retângulos */
+    padding: 0; /* Remover padding padrão de UL */
+    list-style: none; /* Remover marcadores de lista */
+}
+
+/* Estilo padrão de cada retângulo de item */
+.cart-item-box {
+    background-color: rgba(255, 255, 255, 0.08); /* Fundo esbranquiçado semi-transparente */
+    border: 1px solid rgba(255, 255, 255, 0.12); /* Borda sutil */
+    border-radius: 8px; /* Cantos arredondados */
+    padding: 15px 20px; /* Preenchimento interno */
+    color: #FFFFFF; /* Texto branco */
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.cart-item-box:hover {
+    background-color: rgba(255, 255, 255, 0.12); /* Mais visível no hover */
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Títulos dos produtos dentro dos retângulos */
+.cart-item-box h6.my-0 {
+    color: #66FCF1; /* Cor de destaque para o nome do produto */
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Detalhes dos produtos (peso/sabor) */
+.cart-item-box small.text-muted {
+    color: #C5C6C7 !important; /* Cor mais clara para o detalhe */
+    font-size: 0.9em;
+}
+
+/* Preço do item */
+.cart-item-box span.text-muted {
+    color: #FFFFFF !important; /* Preço em branco */
+    font-weight: 500;
+}
+
+/* Estilo específico para o item "Total" */
+.cart-total-box {
+    background-color: rgba(102, 252, 241, 0.15); /* Fundo ciano semi-transparente para o total */
+    border-color: #66FCF1; /* Borda ciano */
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 18px 25px; /* Mais preenchimento */
+    justify-content: center !important;
+    gap: 15px;
+}
+
+.cart-total-box span { /* Texto "Total" */
+    color: #66FCF1; /* Cor de destaque para o texto "Total" */
+}
+
+.cart-total-box strong { /* Valor do Total */
+    color: #FFFFFF; /* Valor em branco */
+    font-size: 1.2em; /* Tamanho maior */
+}
+
+/* --- FIM DOS ESTILOS PARA OS ITENS DO CARRINHO --- */
