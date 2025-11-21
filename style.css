@@ -439,8 +439,8 @@ main{
 }
 
 /* ====================================
-   CHECKOUT PAGE STYLES (Estilização Baseada no Tema FitShop)
-   ==================================== */
+    CHECKOUT PAGE STYLES (Estilização Baseada no Tema FitShop)
+    ==================================== */
 
 /* Corpo e Fundo */
 body.grey.lighten-3 {
@@ -610,11 +610,6 @@ hr {
     background-color: #121417 !important; /* Fundo para o card de desconto */
 }
 
-.card.p-2 .form-control {
-    background-color: #0B0C10 !important;
-    border: 1px solid #1F2833 !important;
-}
-
 /* Botão "Aplicar" (secundário) */
 .btn-secondary {
     background-color: #1F2833 !important; /* Fundo do botão "Aplicar" */
@@ -696,7 +691,7 @@ hr {
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon{
-     filter: invert(100%); opacity: 0.9 
+      filter: invert(100%); opacity: 0.9 
 }
 
 @media (max-width: 820px){
@@ -729,7 +724,7 @@ hr {
 }
 
 .carousel-item-js img {
-    /*width: 100%;          /* FALTAVA – É ESSENCIAL */
+    /*width: 100%;           /* FALTAVA – É ESSENCIAL */
     height: 480px;
     object-fit: cover;
     object-position: center;
@@ -792,16 +787,17 @@ hr {
 }
 
 .carousel-supp-link {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .carousel-supp-link:hover {
-  text-decoration: underline;
-  color: #66FCF1;
+    text-decoration: underline;
+    color: #66FCF1;
 }
 
+/* === ESTILOS DOS BOTÕES VOLTAR/PAGAMENTO === */
 /* Estilização para o botão principal de Pagamento/Checkout (azul-claro vibrante) */
 .btn.btn-primary.checkout-btn {
     /* Cor de fundo e borda */
@@ -867,30 +863,52 @@ hr {
     font-weight: bold !important;
     box-shadow: none !important;
 }
-/* Estilização para o botão "Aplicar" do cupom de desconto */
-.card.p-2 .input-group-append .btn.btn-secondary {
-    background-color: #4CAF50 !important; /* Verde mais escuro para "Aplicar" */
-    border-color: #4CAF50 !important;
-    color: #FFFFFF !important; /* Texto branco */
-    font-weight: bold !important;
-    border-radius: 0 5px 5px 0 !important; /* Apenas lado direito arredondado */
-    padding: 8px 15px !important; /* Ajusta o tamanho */
-}
 
-.card.p-2 .input-group-append .btn.btn-secondary:hover {
-    background-color: #45a049 !important;
-    border-color: #45a049 !important;
+/* === ESTILOS DO CUPOM DE DESCONTO (ATIVO/INATIVO) === */
+
+/* 1. ESTILO PADRÃO (INATIVO): Campo de input */
+#coupon-input {
+    background-color: #0B0C10 !important; /* Usando a variável do tema */
     color: #FFFFFF !important;
+    border-radius: 5px 0 0 5px !important;
+    /* Borda inativa: Cinza suave */
+    border: 1px solid var(--surface) !important; 
+    transition: border-color 0.3s ease;
 }
 
-/* Estilização para o campo de input do cupom de desconto */
-.card.p-2 .input-group .form-control {
-    background-color: #2c3e50 !important; /* Fundo mais escuro */
-    border: 1px solid #4CAF50 !important; /* Borda da cor do botão Aplicar */
-    color: #FFFFFF !important; /* Texto branco */
-    border-radius: 5px 0 0 5px !important; /* Apenas lado esquerdo arredondado */
+#coupon-input::placeholder {
+    color: #9fa0a0 !important; 
 }
 
-.card.p-2 .input-group .form-control::placeholder {
-    color: #cccccc !important; /* Cor do placeholder mais clara */
+/* 2. ESTILO PADRÃO (INATIVO): Botão "Aplicar" */
+#apply-button {
+    /* Cor do botão inativo: Cinza escuro/Surface */
+    background-color: var(--surface) !important; 
+    border-color: var(--surface) !important;
+    color: #9fa0a0 !important; /* Texto cinza suave */
+    font-weight: bold !important;
+    border-radius: 0 5px 5px 0 !important;
+    padding: 8px 15px !important; 
+    cursor: not-allowed; 
+    transition: all 0.3s ease;
+}
+
+/* 3. ESTILO ATIVO (VERDE): Aplicado pelo JavaScript quando há texto */
+
+/* Borda ATIVA do Input (Verde) */
+.coupon-input-active {
+    border: 1px solid #4CAF50 !important; /* Borda verde ativa */
+}
+
+/* Botão ATIVO (Verde) */
+.coupon-active {
+    background-color: #4CAF50 !important; /* Verde ativo */
+    border-color: #4CAF50 !important;
+    color: #FFFFFF !important; /* Texto branco no botão ativo */
+    cursor: pointer !important; 
+}
+
+.coupon-active:hover {
+    background-color: #45a049 !important; /* Verde mais escuro no hover */
+    border-color: #45a049 !important;
 }
