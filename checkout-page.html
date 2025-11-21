@@ -18,78 +18,52 @@
 
   <!-- Custom styles -->
   <link href="css/style.min.css" rel="stylesheet">
+
+ <!-- <link rel="stylesheet" href="reset.css"> -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="grey lighten-3">
 
-  <!-- Navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
-    <div class="container">
-
-      <!-- Brand -->
-      <a class="navbar-brand waves-effect" href="index.html">
-        <strong class="blue-text">FitShop</strong>
+    <header class="header-principal">
+    <div class="nav-container">
+      <a class="header-logo">
+        <strong>FitShop</strong>
       </a>
-
-      <!-- Collapse -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Links -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        <!-- Left -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link waves-effect" href="index.html">Início
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link waves-effect" href="#">Suplementos</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link waves-effect" href="#">Acessórios</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link waves-effect" href="#">Contato</a>
-          </li>
-        </ul>
-
-        <!-- Right -->
-        <ul class="navbar-nav nav-flex-icons">
-          <li class="nav-item">
-            <a class="nav-link waves-effect">
-              <span class="badge red z-depth-1 mr-1">1</span>
-              <i class="fas fa-shopping-cart"></i>
-              <span class="clearfix d-none d-sm-inline-block">Carrinho</span>
-            </a>
-          </li>
-        </ul>
-
-      </div>
-
+        <nav class="menu-navegacao">
+            <ul>
+                <li><a href='#'>Início</a></li>
+                <li><a href='#'>Suplementos</a></li>
+                <li><a href='#'>Acessórios</a></li>
+                <li><a href='#'>Contato</a></li>
+                <li>
+                  <a href='#'>
+                    <span class="badge-contador">1</span> Carrinho
+                  </a>
+                </li>
+            </ul>
+        </nav>
     </div>
-  </nav>
-  <!-- Navbar -->
+  </header>
 
   <!-- Main -->
   <main class="mt-5 pt-4">
-    <div class="container wow fadeIn">
+    <div class="container wow fadeIn checkout-main">
 
       <!-- Heading -->
       <h2 class="my-5 h2 text-center">Checkout FitShop</h2>
+
+      <!-- Área de resultado (escondida por padrão) -->
+      <div id="checkout-result" class="carousel-text" style="display:none; max-width:900px;">
+        <!-- Conteúdo será preenchido via JS -->
+      </div>
 
       <div class="row">
 
         <!-- Form -->
         <div class="col-md-8 mb-4">
-          <div class="card">
-            <form class="card-body">
+          <div class="card carousel-text" style="position:static; transform:none;">
+            <form id="checkout-form" class="card-body" action="cart-page.html" method="get">
 
               <div class="row">
                 <div class="col-md-6 mb-2">
@@ -276,12 +250,38 @@
   </main>
 
   <!-- Footer -->
-  <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+  <footer class="page-footer site-footer wow fadeIn">
 
-    <hr class="my-4">
+    <div class="footer-top">
+      <div class="footer-container">
+        <div class="footer-column footer-about">
+          <h3 class="footer-brand">FitShop</h3>
+          <p>Suplementos e acessórios premium para sua melhor performance. Qualidade e suporte para seus treinos.</p>
+        </div>
 
-    <div class="pb-4">
-      <strong>FitShop © 2025 — Todos os direitos reservados</strong>
+        <div class="footer-column footer-links">
+          <h4>Links úteis</h4>
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Suplementos</a></li>
+            <li><a href="#">Acessórios</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column footer-social">
+          <h4>Siga-nos</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="Twitter">Twitter</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>FitShop © 2025 — Todos os direitos reservados</p>
     </div>
 
   </footer>
@@ -293,6 +293,7 @@
   <script src="js/mdb.min.js"></script>
 
   <script>
+    // Inicializa WOW
     new WOW().init();
   </script>
 
