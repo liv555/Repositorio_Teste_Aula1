@@ -5,7 +5,93 @@ body{
     background-color: #f4f4f4;
 }
 
-img{
+/*PARTE DOS PRODUTOS*/
+
+/* Texto introdutório */
+.ContainerTextoProduto {
+    background-color: #0B0C10;
+    color: #FFFFFF;
+    padding: 24px;
     max-width: 100%;
-    height: 50%;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    /* NOVO: Adiciona uma linha de destaque à esquerda */
+    border-left: 10px solid #66FCF1;
+}
+
+/* Container que envolve tudo */
+.ContainerConteudoProduto {
+    background-color: #0B0C10;
+    color: #FFFFFF;
+    padding: 24px;
+    max-width: 100%;
+}
+
+/* Container dos cards dos produtos */
+.ContainerImgProduto {
+    background-color: #0B0C10;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap; /* deixa responsivo */
+    padding: 24px 12px;
+}
+
+/* Card de cada produto */
+.ImagemProduto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #1F2833;   /* Fundo premium para os cards */
+    padding: 16px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    transition: 0.3s;
+    max-width: 330px;
+    width: 100%;
+}
+
+/* Efeito no card inteiro */
+.ImagemProduto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Imagens dos produtos */
+.ImagemProduto img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: 0.5s;
+}
+
+.ImagemProduto:hover img {
+    transform: scale(1.05);
+}
+
+.produto-titulo-preço, .TituloProdutos{
+    color: #FFFFFF;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-top: 14px;
+}
+
+/* Ajuste o estilo existente ou adicione se ainda não tiver feito */
+.TituloProdutos{
+    color: #66FCF1; /* Cor de destaque para o título */
+    font-size: 1.5rem; /* Aumenta o tamanho */
+    font-weight: 700; /* Mais negrito */
+    margin-bottom: 1rem; /* Adiciona espaço abaixo do título */
+    text-transform: uppercase; /* Deixa em caixa alta */
+    letter-spacing: 1.5px; /* Adiciona espaçamento entre as letras */
+}
+
+.TextoDeInfo {
+    color: #C5C6C7; /* Cinza claro para melhor contraste e leitura */
+    font-size: 1.05rem; /* Tamanho confortável */
+    line-height: 1.7; /* Aumenta a altura da linha para legibilidade */
+    margin-top: 0; /* Garante que não haja margem superior extra se for o primeiro elemento após o título */
 }
