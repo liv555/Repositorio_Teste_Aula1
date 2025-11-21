@@ -27,17 +27,17 @@
 
     <header class="header-principal">
     <div class="nav-container">
-      <a class="header-logo">
+      <a class="header-logo" href="home-page.html">
         <strong>FitShop</strong>
       </a>
         <nav class="menu-navegacao">
             <ul>
-                <li><a href='#'>Início</a></li>
-                <li><a href='#'>Suplementos</a></li>
-                <li><a href='#'>Acessórios</a></li>
-                <li><a href='#'>Contato</a></li>
+                <li><a href="home-page.html">Início</a></li>
+                <li><a href="product-page.html">Suplementos</a></li>
+                <li><a href="#">Acessórios</a></li>
+                <li><a href="#">Contato</a></li>
                 <li>
-                  <a href='#'>
+                  <a href="cart-page.html">
                     <span class="badge-contador">1</span> Carrinho
                   </a>
                 </li>
@@ -61,21 +61,21 @@
       <div class="row">
 
         <!-- Form -->
-        <div class="col-md-8 mb-4">
+        <div class="col-md-9 mb-4">
           <div class="card carousel-text" style="position:static; transform:none;">
             <form id="checkout-form" class="card-body" action="cart-page.html" method="get">
 
               <div class="row">
                 <div class="col-md-6 mb-2">
                   <div class="md-form">
-                    <input type="text" id="firstName" class="form-control">
+                      <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Nome">
                     <label for="firstName">Nome</label>
                   </div>
                 </div>
 
                 <div class="col-md-6 mb-2">
                   <div class="md-form">
-                    <input type="text" id="lastName" class="form-control">
+                      <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Sobrenome">
                     <label for="lastName">Sobrenome</label>
                   </div>
                 </div>
@@ -83,43 +83,24 @@
 
               <!-- Email -->
               <div class="md-form mb-5">
-                <input type="text" id="email" class="form-control" placeholder="seuemail@exemplo.com">
+                 <input type="email" id="email" name="email" class="form-control" placeholder="seuemail@exemplo.com">
                 <label for="email">E-mail</label>
               </div>
 
               <!-- Address -->
               <div class="md-form mb-5">
-                <input type="text" id="address" class="form-control" placeholder="Rua Exemplo, 123">
+                 <input type="text" id="address" name="address" class="form-control" placeholder="Rua Exemplo, 123">
                 <label for="address">Endereço</label>
               </div>
 
               <div class="md-form mb-5">
-                <input type="text" id="address-2" class="form-control" placeholder="Complemento">
+                 <input type="text" id="address-2" name="address2" class="form-control" placeholder="Complemento">
                 <label for="address-2">Complemento</label>
               </div>
 
               <div class="row">
-                <div class="col-lg-4 col-md-12 mb-4">
-                  <label for="country">País</label>
-                  <select class="custom-select d-block w-100" id="country">
-                    <option value="">Selecione...</option>
-                    <option>Brasil</option>
-                  </select>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                  <label for="state">Estado</label>
-                  <select class="custom-select d-block w-100" id="state">
-                    <option value="">Selecione...</option>
-                    <option>São Paulo</option>
-                    <option>Rio de Janeiro</option>
-                    <option>Minas Gerais</option>
-                  </select>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                  <label for="zip">CEP</label>
-                  <input type="text" class="form-control" id="zip">
+                <div class="col-12 mb-4">
+                  <input type="text" class="form-control" id="zip" name="zip" placeholder="CEP">
                 </div>
               </div>
 
@@ -156,27 +137,26 @@
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="cc-name">Nome no cartão</label>
-                  <input type="text" class="form-control" id="cc-name">
+              <!-- Agrupar campos do cartão para esconder/mostrar quando PIX selecionado -->
+              <div id="card-fields">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <input type="text" class="form-control" id="cc-name" name="ccname" placeholder="Nome no cartão">
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <input type="text" class="form-control" id="cc-number" name="ccnumber" placeholder="Número do cartão">
+                  </div>
                 </div>
 
-                <div class="col-md-6 mb-3">
-                  <label for="cc-number">Número do cartão</label>
-                  <input type="text" class="form-control" id="cc-number">
-                </div>
-              </div>
+                <div class="row">
+                  <div class="col-md-3 mb-3">
+                    <input type="text" class="form-control" id="cc-expiration" name="ccexp" placeholder="MM/AA">
+                  </div>
 
-              <div class="row">
-                <div class="col-md-3 mb-3">
-                  <label for="cc-expiration">Validade</label>
-                  <input type="text" class="form-control" id="cc-expiration">
-                </div>
-
-                <div class="col-md-3 mb-3">
-                  <label for="cc-cvv">CVV</label>
-                  <input type="text" class="form-control" id="cc-cvv">
+                  <div class="col-md-3 mb-3">
+                    <input type="text" class="form-control" id="cc-cvv" name="cccvv" placeholder="CVV">
+                  </div>
                 </div>
               </div>
 
@@ -189,63 +169,6 @@
             </form>
           </div>
         </div>
-
-        <!-- Cart -->
-        <div class="col-md-4 mb-4">
-          <h4 class="d-flex justify-content-between align-items-center mb-3">
-            <span class="text-muted">Seu carrinho</span>
-            <span class="badge badge-secondary badge-pill">3</span>
-          </h4>
-
-          <ul class="list-group mb-3 z-depth-1">
-
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-              <div>
-                <h6 class="my-0">Whey Protein Isolado</h6>
-                <small class="text-muted">900g - Baunilha</small>
-              </div>
-              <span class="text-muted">R$ 149,90</span>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-              <div>
-                <h6 class="my-0">Creatina Monohidratada</h6>
-                <small class="text-muted">250g</small>
-              </div>
-              <span class="text-muted">R$ 89,90</span>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-              <div>
-                <h6 class="my-0">Barra Proteica</h6>
-                <small class="text-muted">Sabor Cookies</small>
-              </div>
-              <span class="text-muted">R$ 12,90</span>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between">
-              <span>Total</span>
-              <strong>R$ 252,70</strong>
-            </li>
-
-          </ul>
-
-          <!-- Promo -->
-          <form class="card p-2">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Código de desconto">
-              <div class="input-group-append">
-                <button class="btn btn-secondary btn-md waves-effect m-0" type="button">
-                  Aplicar
-                </button>
-              </div>
-            </div>
-          </form>
-
-        </div>
-
-      </div>
-
     </div>
   </main>
 
@@ -295,6 +218,25 @@
   <script>
     // Inicializa WOW
     new WOW().init();
+
+    // Mostrar/ocultar campos do cartão quando PIX for selecionado
+    (function(){
+      const radios = document.querySelectorAll('input[name="paymentMethod"]');
+      const cardFields = document.getElementById('card-fields');
+      if(!radios || !cardFields) return;
+
+      function update() {
+        const pix = document.getElementById('pix');
+        if(pix && pix.checked) {
+          cardFields.style.display = 'none';
+        } else {
+          cardFields.style.display = '';
+        }
+      }
+
+      radios.forEach(r => r.addEventListener('change', update));
+      update();
+    })();
   </script>
 
 </body>

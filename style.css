@@ -5,6 +5,19 @@ body{
     background-color: #0B0C10;
 }
 
+html, body {
+    height: 100%;
+}
+
+/* layout para empurrar o footer para baixo */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{ flex: 1; }
+
 /*MENU*/
 .header-principal{
     position: fixed;
@@ -115,7 +128,10 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 110px; /* afasta o conteúdo do header fixo */
 }
+
+.cart-main{ padding-top: 110px; }
 
 /* Ajuste para o bloco de confirmação/resultado do checkout */
 #checkout-result{
@@ -125,6 +141,53 @@ main{
 /* Ajuste visual para o card-form que usamos como bloco */
 .carousel-text.card{
     padding: 20px 28px;
+}
+
+/* Esconder labels e estilizar inputs apenas nas páginas de checkout/cart */
+.checkout-main .md-form label,
+.cart-main .md-form label {
+    display: none;
+}
+
+.checkout-main .form-control,
+.cart-main .form-control {
+    border-radius: 10px !important;
+    padding: 12px 14px !important;
+    font-size: 1rem !important;
+}
+
+/* Espaçamento entre caixas de texto no checkout/cart */
+.checkout-main .md-form,
+.cart-main .md-form {
+    margin-bottom: 1.1rem;
+}
+
+/* Centralizar e padronizar largura das caixas de texto no checkout e no carrinho */
+.checkout-main .md-form,
+.cart-main .md-form {
+    width: 100%;
+}
+
+.checkout-main .md-form .form-control,
+.cart-main .md-form .form-control,
+.checkout-main input.form-control,
+.checkout-main select.form-control,
+.checkout-main textarea.form-control,
+.cart-main input.form-control,
+.cart-main select.form-control,
+.cart-main textarea.form-control {
+    max-width: 720px; /* largura uniforme dos inputs */
+    width: 100%;
+    margin: 0 auto; /* centraliza horizontalmente */
+    display: block;
+    box-sizing: border-box;
+}
+
+@media (max-width: 820px){
+    .checkout-main .md-form .form-control,
+    .cart-main .md-form .form-control {
+        max-width: 92%;
+    }
 }
 
 
@@ -418,6 +481,14 @@ body.grey.lighten-3 {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35); /* Sombra suave */
     border: none;
     color: #C5C6C7;
+}
+
+/* Aumentar largura máxima e centralizar os cards usados no Checkout e no Carrinho */
+.checkout-main .card,
+.cart-main .card {
+    max-width: 350px; /* ajustar conforme necessário */
+    width: 100%;
+    margin: 0 auto; /* centraliza horizontalmente */
 }
 
 /* Formulário e Inputs */
