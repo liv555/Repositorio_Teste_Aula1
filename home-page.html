@@ -6,145 +6,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>FitShop - Seu E-commerce Fitness</title>
-  
-  <!-- <link rel="stylesheet" href="reset.css"> -->
+
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
   <!-- Navbar -->
-    <header class="header-principal">
+  <header class="header-principal">
     <div class="nav-container">
       <a class="header-logo">
         <strong>FitShop</strong>
       </a>
-        <nav class="menu-navegacao">
-            <ul>
-                <li><a href='#'>Início</a></li>
-                <li><a href='#'>Suplementos</a></li>
-                <li><a href='#'>Acessórios</a></li>
-                <li><a href='#'>Contato</a></li>
-                <li>
-                  <a href='#'>
-                    <span class="badge-contador">2</span> Carrinho
-                  </a>
-                </li>
-            </ul>
-        </nav>
+      <nav class="menu-navegacao">
+        <ul>
+          <li><a href='#'>Início</a></li>
+          <li><a href='#'>Suplementos</a></li>
+          <li><a href='#'>Acessórios</a></li>
+          <li><a href='#'>Contato</a></li>
+          <li>
+            <a href='#'>
+              <span class="badge-contador">2</span> Carrinho
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <!-- CARROSSEL -->
-  <div id="carousel-example-1z" class="carousel slide carousel-fade pt-4" data-ride="carousel">
 
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-1z" data-slide-to="1"></li>
-      <li data-target="#carousel-example-1z" data-slide-to="2"></li>
-    </ol>
 
-    <div class="carousel-inner" role="listbox">
+  <!-- CARROSSEL JAVASCRIPT -->
+  <div class="carousel-js">
+    <div class="carousel-track">
 
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <div class="view" style="background-image: url('https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg'); background-size: cover;">
-          <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
-
-            <div class="text-center white-text mx-5 wow fadeIn carousel-text">
-              <h1 class="mb-4"><strong>Os Melhores Suplementos</strong></h1>
-              <p><strong>Produtos 100% originais para sua performance</strong></p>
-              <a class="btn btn-outline-white btn-lg">Comprar agora <i class="fas fa-dumbbell ml-2"></i></a>
-            </div>
-
-          </div>
+      <!-- Suplementos -->
+      <div class="carousel-item-js">
+        <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg" alt="Suplementos">
+        <div class="carousel-caption-js">
+      <h2>
+        <a href="product-page.html" 
+          class="carousel-supp-link" 
+          target="_blank" 
+          rel="noopener noreferrer">
+            Os Melhores Suplementos
+        </a>
+      </h2>
+          <p>Performance, qualidade e resultado.</p>
         </div>
       </div>
 
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="view" style="background-image: url('https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg'); background-size: cover;">
-          <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
-
-            <div class="text-center white-text mx-5 wow fadeIn carousel-text">
-              <h2 class="mb-4"><strong>Roupas Fitness</strong></h2>
-              <p><strong>Conforto e estilo para seus treinos</strong></p>
-              <a class="btn btn-outline-white btn-lg">Ver roupas <i class="fas fa-tshirt ml-2"></i></a>
-            </div>
-
-          </div>
+      <!-- Roupas Fitness -->
+      <div class="carousel-item-js">
+        <img src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg" alt="Roupas Fitness">
+        <div class="carousel-caption-js">  
+      <h2>
+        <a href="roupa-page.html" 
+          class="carousel-supp-link" 
+          target="_blank" 
+          rel="noopener noreferrer">
+            Roupas Fitness
+        </a>
+      </h2>
+          <p>Conforto e estilo para qualquer treino.</p>
         </div>
       </div>
 
-      <!-- Slide 3 -->
-      <div class="carousel-item">
-        <div class="view" style="background-image: url('https://images.pexels.com/photos/3253498/pexels-photo-3253498.jpeg'); background-size: cover;">
-          <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
-
-            <div class="text-center white-text mx-5 wow fadeIn carousel-text">
-              <h2 class="mb-4"><strong>Acessórios Essenciais</strong></h2>
-              <p><strong>Cuidando da sua saúde dentro e fora da academia</strong></p>
-              <a class="btn btn-outline-white btn-lg">Ver acessórios <i class="fas fa-running ml-2"></i></a>
-            </div>
-
-          </div>
+      <!-- Acessórios -->
+      <div class="carousel-item-js">
+        <img src="https://images.pexels.com/photos/3253498/pexels-photo-3253498.jpeg" alt="Acessórios">
+        <div class="carousel-caption-js">
+      <h2>
+        <a href="acessorios-page.html" 
+          class="carousel-supp-link" 
+          target="_blank" 
+          rel="noopener noreferrer">
+            Acessórios Essenciais
+        </a>
+      </h2>
+          <p>Aumente sua produtividade com segurança.</p>
         </div>
       </div>
 
     </div>
 
-    <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
+    <!-- Botões -->
+    <button class="carousel-btn prev">‹</button>
+    <button class="carousel-btn next">›</button>
 
+    <!-- Indicadores -->
+    <div class="carousel-indicators-js">
+      <span data-slide="0" class="active"></span>
+      <span data-slide="1"></span>
+      <span data-slide="2"></span>
+    </div>
   </div>
-  <!-- CARROSSEL -->
+  <!-- FIM CARROSSEL -->
 
-  <!-- MAIN -->
-  <main>
-    <div class="container">
 
-      <!-- Categories -->
-      <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
-
-        <span class="navbar-brand">Categorias:</span>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="basicExampleNav">
-
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active"><a class="nav-link" href="#">Todos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Suplementos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Roupas Fitness</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Acessórios</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Saúde</a></li>
-          </ul>
-
-          <form class="form-inline">
-            <input class="form-control" type="text" placeholder="Buscar produto...">
-          </form>
-
-        </div>
-
-      </nav>
-
-  </main>
 
   <hr class="divisoria-rodape">
+
   <!-- Footer -->
-  <footer class="page-footer site-footer wow fadeIn">
+  <footer class="page-footer site-footer">
 
     <div class="footer-top">
       <div class="footer-container">
         <div class="footer-column footer-about">
           <h3 class="footer-brand">FitShop</h3>
-          <p>Suplementos e acessórios premium para sua melhor performance. Qualidade e suporte para seus treinos.</p>
+          <p>Suplementos e acessórios premium para sua melhor performance.</p>
         </div>
 
         <div class="footer-column footer-links">
@@ -160,9 +131,9 @@
         <div class="footer-column footer-social">
           <h4>Siga-nos</h4>
           <div class="social-icons">
-            <a href="#" aria-label="Instagram">Instagram</a>
-            <a href="#" aria-label="Facebook">Facebook</a>
-            <a href="#" aria-label="Twitter">Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
           </div>
         </div>
       </div>
@@ -174,16 +145,9 @@
 
   </footer>
 
-  <!-- JS -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/mdb.min.js"></script>
 
-  <script>
-    new WOW().init();
-  </script>
-
+  <!-- JavaScript -->
+  <script src="carousel.js"></script>
 </body>
-</html>
 
+</html>
