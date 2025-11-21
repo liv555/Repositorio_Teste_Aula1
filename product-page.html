@@ -13,54 +13,30 @@
 
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
-    <div class="container">
-
-      <a class="navbar-brand waves-effect" href="#">
-        <strong class="blue-text">FitShop</strong>
+  <header class="header-principal">
+    <div class="nav-container">
+      <a class="header-logo">
+        <strong>FitShop</strong>
       </a>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        <!-- Left -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link waves-effect" href="#">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link waves-effect" href="#">Suplementos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link waves-effect" href="#">Acessórios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link waves-effect" href="#">Contato</a>
-          </li>
-        </ul>
-
-        <!-- Right -->
-        <ul class="navbar-nav nav-flex-icons">
-          <li class="nav-item">
-            <a class="nav-link waves-effect">
-              <span class="badge red z-depth-1 mr-1">2</span>
-              <i class="fas fa-shopping-cart"></i>
-              <span class="d-none d-sm-inline-block">Carrinho</span>
-            </a>
-          </li>
-        </ul>
-
-      </div>
-
+        <nav class="menu-navegacao">
+            <ul>
+                <li><a href='#'>Início</a></li>
+                <li><a href='#'>Suplementos</a></li>
+                <li><a href='#'>Acessórios</a></li>
+                <li><a href='#'>Contato</a></li>
+                <li>
+                  <a href='#'>
+                    <span class="badge-contador">2</span> Carrinho
+                  </a>
+                </li>
+            </ul>
+        </nav>
     </div>
-  </nav>
-  <!-- Navbar -->
-
-      <!-- Additional info -->
+  </header>
+  
+  <main>
+    <div class="container my-5">
+      
       <div class="ContainerTextoProduto">
         <div class="ContainerConteudoProduto">
 
@@ -74,7 +50,6 @@
         </div>
       </div>
 
-      <!-- Related products -->
       <div class="ContainerImgProduto">
 
         <div class="ImagemProduto">
@@ -96,9 +71,9 @@
 
     </div>
   </main>
-  <!-- Main -->
+  
   <hr class="divisoria-rodape">
-  <!-- Footer -->
+
   <footer class="page-footer site-footer wow fadeIn">
 
     <div class="footer-top">
@@ -135,7 +110,6 @@
 
   </footer>
 
-  <!-- JS -->
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
