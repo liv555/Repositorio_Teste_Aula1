@@ -1,22 +1,38 @@
+:root{
+    --bg: #0B0C10;
+    --accent: #66FCF1;
+    --muted: #C5C6C7;
+    --surface: #1F2833;
+    --max-width: 1100px;
+    --font-sans: 'Poppins', 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+*{ box-sizing: border-box; }
+
+html, body { height: 100%; }
+
 body{
-    font-family: Arial, sans-serif;
+    font-family: var(--font-sans);
     margin: 0;
     padding: 0;
-    background-color: #0B0C10;
-}
-
-html, body {
-    height: 100%;
-}
-
-/* layout para empurrar o footer para baixo */
-body {
+    background-color: var(--bg);
+    color: var(--muted);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 main{ flex: 1; }
+
+/* Headings padrão */
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--font-sans);
+    font-weight: 700;
+    margin: 0 0 .6rem 0;
+    letter-spacing: 0.3px;
+}
 
 /*MENU*/
 .header-principal{
@@ -784,4 +800,97 @@ hr {
 .carousel-supp-link:hover {
   text-decoration: underline;
   color: #66FCF1;
+}
+
+/* Estilização para o botão principal de Pagamento/Checkout (azul-claro vibrante) */
+.btn.btn-primary.checkout-btn {
+    /* Cor de fundo e borda */
+    background-color: #63FFDA !important; 
+    border-color: #63FFDA !important; 
+    
+    /* Cor da fonte: BRANCA */
+    color: #FFFFFF !important; 
+    font-weight: bold !important;
+    
+    /* Borda arredondada */
+    border-radius: 30px !important; 
+    
+    /* AJUSTE DO TAMANHO: Padding menor para diminuir a altura */
+    padding: 10px 30px !important; 
+    
+    /* REMOÇÃO DA LARGURA TOTAL para permitir que fiquem lado a lado */
+    width: auto !important; 
+    max-width: none !important;
+    
+    text-align: center;
+    box-shadow: none !important;
+}
+
+/* Estilo do hover para o botão principal */
+.btn.btn-primary.checkout-btn:hover,
+.btn.btn-primary.checkout-btn:active,
+.btn.btn-primary.checkout-btn:focus {
+    background-color: #40e0cf !important; 
+    border-color: #40e0cf !important;
+    color: #FFFFFF !important; 
+    font-weight: bold !important;
+    box-shadow: none !important; 
+}
+
+/* Estilização para o botão "Voltar" (secundário) */
+.btn.btn-secondary.checkout-btn {
+    /* Cor da fonte: BRANCA */
+    color: #FFFFFF !important;
+    font-weight: bold !important;
+    
+    /* Borda arredondada */
+    border-radius: 30px !important;
+    
+    /* AJUSTE DO TAMANHO: Padding menor para diminuir a altura */
+    padding: 10px 30px !important;
+    
+    /* Fundo Cinza para o botão Voltar */
+    background-color: #6c757d !important; 
+    border-color: #6c757d !important;
+    
+    /* REMOÇÃO DA LARGURA TOTAL */
+    width: auto !important;
+    max-width: none !important;
+    
+    box-shadow: none !important;
+}
+
+.btn.btn-secondary.checkout-btn:hover {
+    background-color: #5a6268 !important;
+    border-color: #5a6268 !important;
+    color: #FFFFFF !important;
+    font-weight: bold !important;
+    box-shadow: none !important;
+}
+/* Estilização para o botão "Aplicar" do cupom de desconto */
+.card.p-2 .input-group-append .btn.btn-secondary {
+    background-color: #4CAF50 !important; /* Verde mais escuro para "Aplicar" */
+    border-color: #4CAF50 !important;
+    color: #FFFFFF !important; /* Texto branco */
+    font-weight: bold !important;
+    border-radius: 0 5px 5px 0 !important; /* Apenas lado direito arredondado */
+    padding: 8px 15px !important; /* Ajusta o tamanho */
+}
+
+.card.p-2 .input-group-append .btn.btn-secondary:hover {
+    background-color: #45a049 !important;
+    border-color: #45a049 !important;
+    color: #FFFFFF !important;
+}
+
+/* Estilização para o campo de input do cupom de desconto */
+.card.p-2 .input-group .form-control {
+    background-color: #2c3e50 !important; /* Fundo mais escuro */
+    border: 1px solid #4CAF50 !important; /* Borda da cor do botão Aplicar */
+    color: #FFFFFF !important; /* Texto branco */
+    border-radius: 5px 0 0 5px !important; /* Apenas lado esquerdo arredondado */
+}
+
+.card.p-2 .input-group .form-control::placeholder {
+    color: #cccccc !important; /* Cor do placeholder mais clara */
 }
