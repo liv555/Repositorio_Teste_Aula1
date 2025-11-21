@@ -724,8 +724,8 @@ hr {
 }
 
 .carousel-item-js img {
-    /*width: 100%;           /* FALTAVA – É ESSENCIAL */
-    height: 480px;
+    width: 35%;           /* FALTAVA – É ESSENCIAL */
+    height: 494px;
     object-fit: cover;
     object-position: center;
     filter: brightness(0.75);
