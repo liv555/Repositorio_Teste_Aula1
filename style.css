@@ -2,10 +2,10 @@ body{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #0B0C10;
 }
 
-/*PARTE DOS PRODUTOS*/
+/*PRODUTOS*/
 
 /* Texto introdutório */
 .ContainerTextoProduto {
@@ -15,8 +15,7 @@ body{
     max-width: 100%;
     font-size: 1.1rem;
     line-height: 1.6;
-    /* NOVO: Adiciona uma linha de destaque à esquerda */
-    border-left: 10px solid #66FCF1;
+    border-left: 10px solid #66FCF1;/*linha de destaque à esquerda*/
 }
 
 /* Container que envolve tudo */
@@ -34,7 +33,7 @@ body{
     justify-content: space-around;
     align-items: flex-start;
     gap: 24px;
-    flex-wrap: wrap; /* deixa responsivo */
+    flex-wrap: wrap;
     padding: 24px 12px;
 }
 
@@ -44,7 +43,7 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: #1F2833;   /* Fundo premium para os cards */
+    background-color: #1F2833;
     padding: 16px;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
@@ -53,13 +52,11 @@ body{
     width: 100%;
 }
 
-/* Efeito no card inteiro */
 .ImagemProduto:hover {
     transform: translateY(-6px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
 }
 
-/* Imagens dos produtos */
 .ImagemProduto img {
     width: 100%;
     height: 210px;
@@ -79,19 +76,125 @@ body{
     margin-top: 14px;
 }
 
-/* Ajuste o estilo existente ou adicione se ainda não tiver feito */
 .TituloProdutos{
-    color: #66FCF1; /* Cor de destaque para o título */
-    font-size: 1.5rem; /* Aumenta o tamanho */
-    font-weight: 700; /* Mais negrito */
-    margin-bottom: 1rem; /* Adiciona espaço abaixo do título */
-    text-transform: uppercase; /* Deixa em caixa alta */
-    letter-spacing: 1.5px; /* Adiciona espaçamento entre as letras */
+    color: #66FCF1;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 .TextoDeInfo {
-    color: #C5C6C7; /* Cinza claro para melhor contraste e leitura */
-    font-size: 1.05rem; /* Tamanho confortável */
-    line-height: 1.7; /* Aumenta a altura da linha para legibilidade */
-    margin-top: 0; /* Garante que não haja margem superior extra se for o primeiro elemento após o título */
+    color: #C5C6C7; 
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-top: 0;
+}
+
+/*DIVISORIA ENTRE MAIN E FOOTER*/
+
+.divisoria-rodape {
+    border: none;
+    height: 4px;
+    background-color: #1F2833; 
+    width: 100%;
+    max-width: 90%; 
+    margin: 40px auto 40px auto; 
+    opacity: 0.8;
+}
+
+/*FOOTER*/
+.site-footer{
+    background: linear-gradient(180deg, #0B0C10 0%, #141618 100%);
+    color: #C5C6C7;
+    padding: 32px 16px 16px;
+
+}
+
+.footer-container{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column{
+    flex: 1 1 220px;
+    min-width: 200px;
+}
+
+.footer-brand{
+    color: #66FCF1;
+    font-size: 1.6rem;
+    margin: 0 0 8px 0;
+}
+
+.footer-about p{
+    color: #B9B9B9;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer-links h4, .footer-social h4{
+    color: #FFFFFF;
+    margin-bottom: 8px;
+}
+
+.footer-links ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li{
+    margin: 6px 0;
+}
+
+.footer-links a{
+    color: #C5C6C7;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.footer-links a:hover{
+    color: #66FCF1;
+}
+
+.social-icons{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.social-icons a{
+    display: inline-block;
+    padding: 8px 12px;
+    background: rgba(255,255,255,0.03);
+    color: #FFFFFF;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform .15s ease, background .15s ease;
+}
+
+.social-icons a:hover{
+    transform: translateY(-3px);
+    background: rgba(102,252,241,0.12);
+}
+
+.footer-bottom{
+    max-width: 1100px;
+    margin: 18px auto 0;
+    text-align: center;
+    color: #9fa0a0;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 720px){
+    .footer-container{flex-direction: column; align-items: center;}
+    .footer-column{min-width: 100%; text-align: center}
+    .footer-links ul li{display: inline-block; margin: 6px 12px}
 }
