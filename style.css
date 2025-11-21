@@ -912,3 +912,69 @@ hr {
     background-color: #45a049 !important; /* Verde mais escuro no hover */
     border-color: #45a049 !important;
 }
+/* --- ESTILOS PARA OS ITENS DO CARRINHO (RETÂNGULOS) --- */
+
+/* Lista pai para espaçamento entre os itens */
+.cart-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Espaçamento entre os retângulos */
+    padding: 0; /* Remover padding padrão de UL */
+    list-style: none; /* Remover marcadores de lista */
+}
+
+/* Estilo padrão de cada retângulo de item */
+.cart-item-box {
+    background-color: rgba(255, 255, 255, 0.08); /* Fundo esbranquiçado semi-transparente */
+    border: 1px solid rgba(255, 255, 255, 0.12); /* Borda sutil */
+    border-radius: 8px; /* Cantos arredondados */
+    padding: 15px 20px; /* Preenchimento interno */
+    color: #FFFFFF; /* Texto branco */
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.cart-item-box:hover {
+    background-color: rgba(255, 255, 255, 0.12); /* Mais visível no hover */
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Títulos dos produtos dentro dos retângulos */
+.cart-item-box h6.my-0 {
+    color: #66FCF1; /* Cor de destaque para o nome do produto */
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Detalhes dos produtos (peso/sabor) */
+.cart-item-box small.text-muted {
+    color: #C5C6C7 !important; /* Cor mais clara para o detalhe */
+    font-size: 0.9em;
+}
+
+/* Preço do item */
+.cart-item-box span.text-muted {
+    color: #FFFFFF !important; /* Preço em branco */
+    font-weight: 500;
+}
+
+/* Estilo específico para o item "Total" */
+.cart-total-box {
+    background-color: rgba(102, 252, 241, 0.15); /* Fundo ciano semi-transparente para o total */
+    border-color: #66FCF1; /* Borda ciano */
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 18px 25px; /* Mais preenchimento */
+    justify-content: center !important;
+    gap: 15px;
+}
+
+.cart-total-box span { /* Texto "Total" */
+    color: #66FCF1; /* Cor de destaque para o texto "Total" */
+}
+
+.cart-total-box strong { /* Valor do Total */
+    color: #FFFFFF; /* Valor em branco */
+    font-size: 1.2em; /* Tamanho maior */
+}
+
+/* --- FIM DOS ESTILOS PARA OS ITENS DO CARRINHO --- */
